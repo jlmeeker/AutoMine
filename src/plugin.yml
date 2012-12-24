@@ -1,0 +1,10 @@
+main: org.meekers.plugins.automine.AutoMine
+name: AutoMine
+version: 1.0
+author: Jared Meeker
+description: Use your experience to do some accelerated mining.
+
+commands:
+   amine:
+      description: Mine something
+      usage: /<command> <length> <width> <height>
