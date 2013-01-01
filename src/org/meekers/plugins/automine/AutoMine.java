@@ -73,7 +73,8 @@ public class AutoMine extends JavaPlugin {
             boolean facingX = false;
 
             // Choose base block
-            Location baseLoc = ploc.clone();
+            //Location baseLoc = ploc.clone();
+            Location baseLoc = player.getTargetBlock(null, 100).getLocation();
             Location blockLoc = baseLoc.clone();
             blockLoc.setWorld(ploc.getWorld());
 
@@ -81,18 +82,18 @@ public class AutoMine extends JavaPlugin {
                 // length is X, width is Z
                 facingX = true;
                 if (v_x > 0) {
-                    baseLoc.setX(baseLoc.getX() + 1);
+                    baseLoc.setX(baseLoc.getX());
                     facingXpos = true;  //East
                 } else {
-                    baseLoc.setX(baseLoc.getX() - 1);
+                    baseLoc.setX(baseLoc.getX());
                 }
             } else {
                 // length is Z, width is X
                 if (v_z > 0) {
-                    baseLoc.setZ(baseLoc.getZ() + 1);
+                    baseLoc.setZ(baseLoc.getZ());
                     facingZpos = true; // South
                 } else {
-                    baseLoc.setZ(baseLoc.getZ() - 1);
+                    baseLoc.setZ(baseLoc.getZ());
                 }
             }
 
