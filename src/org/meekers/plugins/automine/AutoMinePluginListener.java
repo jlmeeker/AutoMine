@@ -16,7 +16,6 @@ class AutoMinePluginListener implements Listener {
 
     public AutoMinePluginListener(AutoMine plugin) {
         this.plugin = plugin;
-        this.plugin.getServer().getPluginManager().registerEvents(this, plugin);
     }
     
 }
